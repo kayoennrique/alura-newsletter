@@ -1,5 +1,11 @@
-const App = () => {
-  return <h1>Hello Tailwind</h1>
-}
+import Header from "./components/Header/Header";
 
-export default App
+const App = () => {
+  return (
+    <div className="w-screen h-screen">
+      <Header />
+    </div>
+  );
+};
+
+export default App;
