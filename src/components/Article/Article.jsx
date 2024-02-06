@@ -1,9 +1,9 @@
-const Article = ({ title, text, tags, image }) => {
+const Article = ({ title, text, tags, image, alt }) => {
   return (
-    <div className="p-5 bg-gray-200 dark:bg-dark-200 sm:rounded-xl sm:shadow-md flex gap-2 flex-col items-center sm:hover:shadow-gray-500 sm:hover:dark:shadow-black sm:hover:shadow-lg">
-      <h1 className="mb-2 text-xl text-alura-200 dark:text-gray-200 font-bold">
+    <div className="alura-card">
+      <h3 className="mb-2 text-xl text-alura-200 dark:text-gray-200 font-bold">
         {title}
-      </h1>
+      </h3>
       <div className="w-full pr-5 flex gap-2 justify-end">
         {tags.map((tag) => (
           <span
@@ -22,6 +22,7 @@ const Article = ({ title, text, tags, image }) => {
         ))}
       </div>
       {image && <img className="sm:p-4" src={image} />}
+      {image && alt && <span className="sr-only">{alt}</span>}
     </div>
   );
 };
